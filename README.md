@@ -11,6 +11,7 @@ The database will contain:
 * Patient Name
     *  Age
     * Blood Type
+* Address
 * Test Results
     1. HDL
     1. LDL
