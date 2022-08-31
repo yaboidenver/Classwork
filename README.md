@@ -9,8 +9,10 @@ The code is written in Python.
 ## Specifications
 The database will contain:
 * Patient Name
-    *  Age
-    * Blood Type
+    * First Name
+    * Last Name
+* Age
+* Blood Type
 * Address
 * Test Results
     1. HDL
