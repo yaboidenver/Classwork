@@ -1,6 +1,6 @@
 # Patient Health Database
 
-Author: Dnever Bradley
+Author: Denver Bradley
 
 ## Purpose
 The code in this repository will run a patient health database.  
