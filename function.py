@@ -68,10 +68,14 @@ def check_Chol(cholesterol):
     else:
         return "Borderline High"
 
-
 def Chol_driver():
     Chol=input_cholesterol()
     answer= check_Chol(Chol)
+    output_cholesterol_results(Chol,answer)
+
+
+def output_cholesterol_results(cholesterol_level, ans)
+    print("The results for a Cholesterol value of {} are {}".format(cholesterol_level,ans))
 
 
 interface()
