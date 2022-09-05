@@ -2,6 +2,7 @@ def interface():
     print("Blood Calculator")
     print("Options:")
     print("1 - Analyze HDL")
+    print("2 - Analyze LDL")
     print("9 - Quit")
     keep_running = True
     while keep_running:
@@ -10,9 +11,11 @@ def interface():
             return
         elif choice == '1':
             HDL_Driver()
+        elif choice == '2':
+            LDL_Driver()
 
 def input_HDL():
-    HDL_input = input("Enter the HDL value:")
+    HDL_input = input("Enter the HDL value: ")
     return int(HDL_input)
 
 def check_HDL(HDL_input):
@@ -32,7 +35,7 @@ def output_HDL_result(hdl_value,charac):
     print("The results for an HDL value of {} is {}".format(hdl_value, charac))
 
 def input_LDL():
-    LDL_input = input("Enter the LDL value:")
+    LDL_input = input("Enter the LDL value: ")
     return int(LDL_input)
 
 def check_LDL(LDL_input):
