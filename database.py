@@ -25,9 +25,9 @@ def main():
 
 
 def print_data(db):
-    for patient in db:
+    for patient in db.values():
         print('Patient name is {}, patient id is {}, and patient age is {}.'
-              .format(get_full_name(db[patient]), db[patient]["Id"], db[patient]["Age"]))
+              .format(get_full_name(patient), patient["Id"], patient["Age"]))
 
 
 def get_full_name(patient):
