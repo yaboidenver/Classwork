@@ -1,5 +1,6 @@
 def create_patient_entry(f_name, l_name, patient_id, patient_age):
-    new_patient = {"First Name": f_name, "Last Name": l_name, "Id": patient_id, "Age": patient_age, "Tests": []}
+    new_patient = {"First Name": f_name, "Last Name": l_name,
+                   "Id": patient_id, "Age": patient_age, "Tests": []}
     return new_patient
 
 
@@ -12,8 +13,9 @@ def main():
 
     add_test(db, 3, 'HDL', 100)
     print(find_pat(db, 3))
-    
-    print("Patient {} is a {}".format(get_full_name(db[22]), adult_or_minor(db[22])))
+
+    print("Patient {} is a {}".format(get_full_name(db[22]),
+          adult_or_minor(db[22])))
 
 
 def print_data(db):
@@ -23,8 +25,8 @@ def print_data(db):
 
 
 def get_full_name(patient):
-        full_name = "{} {}".format(patient["First Name"], patient["Last Name"])
-        return full_name
+    full_name = "{} {}".format(patient["First Name"], patient["Last Name"])
+    return full_name
 
 
 def find_pat(db, id):
