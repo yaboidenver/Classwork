@@ -15,14 +15,6 @@ def main():
     
     print("Patient {} is a {}".format(get_full_name(db[22]), adult_or_minor(db[22])))
 
-#     room_list = ["Room 1", "Room 2", 'Room 3']
-
-#     for i, patient in enumerate(db):
-#         print('Name = {}, Room = {}'.format(patient[0], room_list[i]))
-
-#     for patient, room in zip(db, room_list):
-#         print('Name = {}, Room = {}'.format(patient[0], room))
-
 
 def print_data(db):
     for patient in db.values():
@@ -38,11 +30,6 @@ def get_full_name(patient):
 def find_pat(db, id):
     patient = db[id]
     return patient
-
-    # for patient in db:
-    #     if id == patient["Id"]:
-    #         return patient
-    # return False
 
 
 def add_test(db, id, test_name, value):
