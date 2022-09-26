@@ -4,16 +4,16 @@ def create_patient_entry(f_name, l_name, patient_id, patient_age):
 
 
 def main():
-    db = []
-    db.append(create_patient_entry("Ann", "Ables", 1, 30))
-    db.append(create_patient_entry('Bob', 'Boyles', 2, 34))
-    db.append(create_patient_entry('Chris', 'Chou', 3, 25))
+    db = {}
+    db[11] = (create_patient_entry("Ann", "Ables", 11, 30))
+    db[22] = (create_patient_entry('Bob', 'Boyles', 22, 34))
+    db[3] = (create_patient_entry('Chris', 'Chou', 3, 25))
     print_data(db)
 
     add_test(db, 3, 'HDL', 100)
     print(find_pat(db, 3))
     
-    print("Patient {} is a {}".format(get_full_name(db[2]), adult_or_minor(db[2])))
+    print("Patient {} is a {}".format(get_full_name(db[22]), adult_or_minor(db[22])))
 
 #     room_list = ["Room 1", "Room 2", 'Room 3']
 
@@ -27,7 +27,7 @@ def main():
 def print_data(db):
     for patient in db:
         print('Patient name is {}, patient id is {}, and patient age is {}.'
-              .format(get_full_name(patient), patient["Id"], patient["Age"]))
+              .format(get_full_name(db[patient]), db[patient]["Id"], db[patient]["Age"]))
 
 
 def get_full_name(patient):
@@ -36,10 +36,13 @@ def get_full_name(patient):
 
 
 def find_pat(db, id):
-    for patient in db:
-        if id == patient["Id"]:
-            return patient
-    return False
+    patient = db[id]
+    return patient
+
+    # for patient in db:
+    #     if id == patient["Id"]:
+    #         return patient
+    # return False
 
 
 def add_test(db, id, test_name, value):
